@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:sec="http://www.thymeleaf.org">
+
+<head th:fragment="header">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link th:href="@{/css/styles.css}" rel="stylesheet" />
+    <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">RunGroop</title>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container px-5">
+        <a class="navbar-brand" th:href="@{/}">
+            <img th:src="@{/assets/horizontal_logo_white.svg}" height="35" width="140" alt="logo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a th:href="@{/articles}">Home</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="bg-dark text-secondary px-4 py-5 mt-5 text-center">
+    <div class="py-5">
+        <h1 class="display-5 fw-bold text-white mb-4">System.out.print("Olá!")</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4">Aqui você encontrará uma variedade de conteúdos relacionados ao mundo da tecnologia, dicas para melhorar a qualidade de vida no ambiente de trabalho e insights sobre como alcançar um equilíbrio saudável entre a carreira e o bem-estar pessoal.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="https://www.linkedin.com/in/marianaramacciotti/" target="_blank">
+                    <button type="button" class="btn btn-primary">Linkedin</button>
+                </a>
+                <a href="https://github.com/Ramacciotti" target="_blank">
+                    <button type="button" class="btn btn-primary" >Github</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body layout:fragment="body"></body>
+
+<footer class="footer-custom py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto">
+                <div class="small m-0 text-white">Copyright &copy;Mariana Ramacciotti, 2023</div>
+            </div>
+            <div class="col-auto">
+                <a class="link-light small" href="https://www.linkedin.com/in/marianaramacciotti/" target="_blank">Linkedin</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" href="https://github.com/Ramacciotti" target="_blank">Github</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/scripts.js"></script>
+
+</html>

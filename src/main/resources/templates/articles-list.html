@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://thymeleaf.org"  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="Mariana Ramacciotti" />
+    <title>Artigos Mariana Ramacciotti</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+    <body class="d-flex flex-column">
+        <main class="flex-shrink-0">
+            <section layout:fragment="body">
+
+                <div class="container px-5 my-5">
+                    <div class="text-center mb-5" hidden="hidden">
+                        <h1 class="fw-bolder">Artigos</h1>
+                        <p class="lead fw-normal text-muted mb-0">Aqui você encontrará uma variedade de conteúdos relacionados ao mundo da tecnologia, dicas para melhorar a qualidade de vida no ambiente de trabalho e insights sobre como alcançar um equilíbrio saudável entre a carreira e o bem-estar pessoal.</p>
+                    </div>
+                    <div class="row gx-5">
+                        <div th:each="article:${articles}" class="col-lg-6 mb-2">
+                            <div class="position-relative mb-3">
+                                <img th:src="@{${article.cover}}" class="img-fluid rounded-3 mb-3" alt="${article.title}" />
+                                <a th:text="${article.title}" class="h3 fw-bolder text-decoration-none link-dark stretched-link" th:href="${article.url}" target="_blank">Title</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+
+</html>
